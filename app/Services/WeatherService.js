@@ -8,7 +8,7 @@ import { Weather } from "../Models/Weather"
 class WeathersService {
     async backgroundImg() {
         let backimg = ProxyState.backgroundImg
-        const res = await sandboxApi.get('', todo)
+        const res = await sandboxApi.get('',)
         console.log("add a todo item", res.data);
     }
 }

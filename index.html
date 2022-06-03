@@ -28,31 +28,16 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div id="app"></div>
+          <!-- <div id="todo-list"></div> -->
         </div>
       </div>
     </div>
 
     <ul class=" offset-10 col-md-2 list-group d-flex justify-self-end">
-      <li class="list-group-item ">
+
+      <li class="list-group-item" id="todo-list">
         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        First checkbox
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        Second checkbox
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        Third checkbox
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        Fourth checkbox
-      </li>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        Fifth checkbox
+
       </li>
       <form onsubmit="app.todosController.addToDo()">
         <input name="description" placeholder="Add a new task" type="text">
