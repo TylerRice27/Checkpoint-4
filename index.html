@@ -28,22 +28,22 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <!-- <div id="todo-list"></div> -->
+
         </div>
       </div>
     </div>
 
-    <ul class=" offset-10 col-md-2 list-group d-flex justify-self-end">
+    <ul id="todo-list" class=" offset-10 col-md-2 list-group d-flex justify-self-end">
 
-      <li class="list-group-item" id="todo-list">
+      <li class="list-group-item">
         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
 
       </li>
-      <form onsubmit="app.todosController.addToDo()">
-        <input name="description" placeholder="Add a new task" type="text">
-        <button class="btn btn-primary">Add a Task</button>
-      </form>
     </ul>
+    <form onsubmit="app.todosController.addToDo()">
+      <input name="description" placeholder="Add a new task" type="text">
+      <button class="btn btn-primary">Add a Task</button>
+    </form>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">

@@ -8,15 +8,15 @@ function _drawToDos() {
     let template = ''
     todos.forEach(t => {
         template += t.TodoTemplate
-
+        document.getElementById("todo-list").innerHTML = template
     })
 }
 
 export class TodosController {
     constructor() {
 
-
-
+        ProxyState.on("todos", _drawToDos)
+        _drawToDos()
         this.getTodo()
     }
 
