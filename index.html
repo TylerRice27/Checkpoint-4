@@ -54,8 +54,10 @@
         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
         Fifth checkbox
       </li>
-      <input placeholder="Add a new task" type="text">
-      <button onclick="app.todosController.addTodo()" class="btn btn-primary">Add a Task</button>
+      <form onsubmit="app.todosController.addToDo()">
+        <input name="description" placeholder="Add a new task" type="text">
+        <button class="btn btn-primary">Add a Task</button>
+      </form>
     </ul>
   </main>
   <footer class="bg-dark text-light">

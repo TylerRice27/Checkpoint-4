@@ -1,14 +1,24 @@
-import { ProxyState } from "../AppState"
+import { ProxyState } from "../AppState.js"
+import { sandboxApi } from "./AxiosService.js";
 
-const sandboxApi = axios.create({
-    baseURL: 'https://bcw-sandbox.herokuapp.com/api/',
-    timeout: 12000
-})
 
 class TodosService {
-    async addTodo() {
-        let todo = ProxyState.todo
-        const res = await sandboxApi.post('', todo)
+
+
+    async addToDo(newToDo) {
+        const res = await sandboxApi.post('', newToDo)
         console.log("add a todo item", res.data);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+export const todosService = new TodosService()
