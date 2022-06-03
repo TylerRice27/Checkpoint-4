@@ -51,6 +51,11 @@ export class TodosController {
         }
     }
 
+    //this is going to be linked to a trash can incon or something
+    // async deleteSpell(id) {
+    //     const res = 
+    // }
+
     seeTodoList() {
         document.getElementById("todo-list").innerHTML = ProxyState.todos
     }

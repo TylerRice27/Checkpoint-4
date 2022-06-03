@@ -8,6 +8,9 @@ export class Todo {
     }
 
 
+    // You cant put the form into the 
+    // template because then 
+    // you have no area to enter anything in
 
     get TodoTemplate() {
         return `
