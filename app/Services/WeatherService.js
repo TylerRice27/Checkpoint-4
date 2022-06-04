@@ -1,16 +1,20 @@
-import { ProxyState } from "../AppState";
-import { Weather } from "../Models/Weather"
+import { ProxyState } from "../AppState.js";
+import { Weather } from "../Models/Weather.js"
+import { sandboxApi } from "./AxiosService.js";
 
 
 
 
 
 class WeathersService {
-    async backgroundImg() {
-        let backimg = ProxyState.backgroundImg
-        const res = await sandboxApi.get('',)
-        console.log("add a todo item", res.data);
+
+    async getWeather() {
+        const res = await sandboxApi.get()
+        console.log('get weather info', res.data);
+
     }
+
+
 }
 
 

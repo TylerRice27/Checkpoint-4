@@ -21,18 +21,23 @@ class TodosService {
     }
 
 
+
+
     async deleteTodo(id) {
-        const res = await sandboxApi.delete('Tyler/todos/:todoId')
+        const res = await sandboxApi.delete('Tyler/todos/_id:', id)
         console.log("delete todo", res.data);
         ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
     }
 
-    // this method is unfished but it is supposed to tell
+    // this method is unfinished but it is supposed to
     // find the id and help with keeping the checkbox saved and 
     // help with the number at the top
+    //this isnt even finding an id when I click on the box
     async completedTodo(id) {
         let todo = ProxyState.todos.find(t => t.id == id)
         console.log(todo);
+        todo.completed = !todo.completed
+        const res = await sandboxApi.put(todo.id, todo)
     }
 
 
