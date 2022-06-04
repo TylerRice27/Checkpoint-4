@@ -8,6 +8,8 @@ function _drawToDos() {
     let template = ''
     todos.forEach(t => {
         template += t.TodoTemplate
+
+
         document.getElementById("todo-list").innerHTML = template
     })
 }
@@ -53,18 +55,31 @@ export class TodosController {
 
     //this is going to be linked to a trash can icon or something
     async deleteTodo(id) {
-        debugger
         try {
             await todosService.deleteTodo(id)
+        }
+        catch (error) {
+            console.error(error)
+            Pop.toast(error.message, 'error')
+        }
+    }
+
+
+    async completedTodo(id) {
+
+        try {
+            await todosService.completedTodo(id)
         } catch (error) {
             console.error(error)
             Pop.toast(error.message, 'error')
         }
     }
 
-    seeTodoList() {
-        document.getElementById("todo-list").innerHTML = ProxyState.todos
-    }
+    // seeTodoList() {
+
+    //     // this code is useless right now
+    //     // document.getElementById("todo-list").innerHTML = ProxyState.todos
+    // }
 
 
 }

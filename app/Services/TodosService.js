@@ -22,9 +22,17 @@ class TodosService {
 
 
     async deleteTodo(id) {
-        const res = await sandboxApi.delete('Tyler/todos')
+        const res = await sandboxApi.delete('Tyler/todos/:todoId')
         console.log("delete todo", res.data);
         ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+    }
+
+    // this method is unfished but it is supposed to tell
+    // find the id and help with keeping the checkbox saved and 
+    // help with the number at the top
+    async completedTodo(id) {
+        let todo = ProxyState.todos.find(t => t.id == id)
+        console.log(todo);
     }
 
 
