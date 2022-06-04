@@ -19,6 +19,7 @@ export class Todo {
       <li class="list-group-item ">
         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
       ${this.description}
+       <div class="col-2 selectable text-danger" onclick="app.todosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete"></i></div>
       </li>
       
       

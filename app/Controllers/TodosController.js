@@ -51,10 +51,16 @@ export class TodosController {
         }
     }
 
-    //this is going to be linked to a trash can incon or something
-    // async deleteSpell(id) {
-    //     const res = 
-    // }
+    //this is going to be linked to a trash can icon or something
+    async deleteTodo(id) {
+        debugger
+        try {
+            await todosService.deleteTodo(id)
+        } catch (error) {
+            console.error(error)
+            Pop.toast(error.message, 'error')
+        }
+    }
 
     seeTodoList() {
         document.getElementById("todo-list").innerHTML = ProxyState.todos

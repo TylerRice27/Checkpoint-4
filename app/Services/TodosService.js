@@ -20,7 +20,12 @@ class TodosService {
 
     }
 
-    // async deleteSpell
+
+    async deleteTodo(id) {
+        const res = await sandboxApi.delete('Tyler/todos')
+        console.log("delete todo", res.data);
+        ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+    }
 
 
 }
