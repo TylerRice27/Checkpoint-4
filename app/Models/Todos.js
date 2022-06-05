@@ -1,6 +1,6 @@
 export class Todo {
   constructor(data) {
-    this.id = data._id || data.id
+    this.id = data._id
     this.completed = data.completed
     this.user = data.user
     this.description = data.description
@@ -16,11 +16,12 @@ export class Todo {
 
   // this is where my checkbox is supposed to tell me if it is completed or not
   get TodoTemplate() {
+
     return `
         
        
       <li class="list-group-item ">
-        <input class="form-check-input me-1" type="checkbox" ${this.completed ? 'checked' : ''} onclick"app.todosController.completedTodo(event,'${this.id}')" >
+        <input type="checkbox" ${this.completed ? 'checked' : ''} onclick"app.todosController.completedTodo('${this.id}')" >
       ${this.description}
        <div class="col-2 selectable text-danger" onclick="app.todosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete"></i></div>
       </li>

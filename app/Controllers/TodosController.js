@@ -83,7 +83,9 @@ export class TodosController {
     }
 
 
-    async completedTodo(event, id) {
+    async completedTodo(id) {
+        debugger
+
         await todosService.completedTodo()
 
     }

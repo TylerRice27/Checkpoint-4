@@ -41,6 +41,7 @@ class TodosService {
     // help with the number at the top
     //this isnt even finding an id when I click on the box
     async completedTodo(id) {
+
         let todo = ProxyState.todos.find(t => t.id == id)
         console.log(todo);
         todo.completed = !todo.completed
