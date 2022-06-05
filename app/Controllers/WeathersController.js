@@ -4,24 +4,19 @@ import { weathersService } from "../Services/WeatherService.js";
 
 
 
+function _drawWeather() {
+    document.getElementById("weather").innerHTML = ProxyState.weather.Template
 
+}
 
 export class WeatherController {
     constructor() {
         console.log("weather controller loaded");
-        ProxyState.on("weather info",)
+        ProxyState.on("weather", _drawWeather)
 
+        weathersService.getWeather()
     }
 
-
-    async getWeather() {
-        try {
-            await weathersService.getWeather()
-        } catch (error) {
-            console.error(error)
-            Pop.toast(error.message, 'error')
-        }
-    }
 
 
 

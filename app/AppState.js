@@ -7,7 +7,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Todo').Todo[]} */
   todos = []
   /** @type {import('./Models/Weather').Weather[]} */
-  weathers = []
+  weather = null
   /** @type {import('./Models/Quote').Quote[]} */
   quotes = null
 
