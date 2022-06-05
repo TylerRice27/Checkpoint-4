@@ -16,7 +16,8 @@ export class Background {
         // document.body.style.backgroundImage = sandboxApi.get('images');
         // console.log(sandboxApi.get('images'));
 
-        document.getElementById("background").innerHTML = document.body.style.backgroundImage = sandboxApi.get('images');
+        document.body.style.backgroundImage = "url('https://bcw-sandbox.herokuapp.com/api/images')";
+
     }
 
 }

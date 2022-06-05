@@ -6,6 +6,7 @@ import { sandboxApi } from "./AxiosService.js";
 class TodosService {
 
 
+
     async addToDo(newToDo) {
         const res = await sandboxApi.post('Tyler/todos', newToDo)
         console.log("add a todo item", res.data);
@@ -24,7 +25,7 @@ class TodosService {
 
 
     async deleteTodo(id) {
-        const res = await sandboxApi.delete('Tyler/todos/_id:', id)
+        const res = await sandboxApi.delete('Tyler/todos/:todoId', id)
         console.log("delete todo", res.data);
         ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
     }

@@ -9,7 +9,7 @@ import { weathersService } from "../Services/WeatherService.js";
 export class WeatherController {
     constructor() {
         console.log("weather controller loaded");
-        // ProxyState.on("weather info", )
+        ProxyState.on("weather info",)
 
     }
 
