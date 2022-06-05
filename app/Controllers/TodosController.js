@@ -83,14 +83,9 @@ export class TodosController {
     }
 
 
-    async completedTodo(id) {
+    async completedTodo(event, id) {
+        await todosService.completedTodo()
 
-        try {
-            await todosService.completedTodo(id)
-        } catch (error) {
-            console.error(error)
-            Pop.toast(error.message, 'error')
-        }
     }
 
     // seeTodoList() {
