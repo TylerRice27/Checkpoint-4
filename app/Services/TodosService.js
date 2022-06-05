@@ -25,9 +25,15 @@ class TodosService {
 
 
     async deleteTodo(id) {
-        const res = await sandboxApi.delete('Tyler/todos/:todoId', id)
+
+        // I have to use the dollar sign with the id because of how I digged into the 
+        // API it will only take in the Id if I give the ${} unless
+        // I would alias my api with a new name to dig all the way into the code
+        const res = await sandboxApi.delete(`Tyler/todos/${id}`)
         console.log("delete todo", res.data);
         ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+
+
     }
 
     // this method is unfinished but it is supposed to

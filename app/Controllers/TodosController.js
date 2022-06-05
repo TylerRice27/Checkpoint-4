@@ -62,12 +62,24 @@ export class TodosController {
     //this is going to be linked to a trash can icon or something
     async deleteTodo(id) {
         try {
-            await todosService.deleteTodo(id)
+
+            let confirmAction = confirm("Are you sure you want to delete?");
+            if (confirmAction) {
+
+
+                await todosService.deleteTodo(id)
+            } else {
+
+                alert("Action canceled");
+            }
+
         }
         catch (error) {
             console.error(error)
             Pop.toast(error.message, 'error')
         }
+
+
     }
 
 
