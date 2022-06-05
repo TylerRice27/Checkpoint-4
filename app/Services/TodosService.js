@@ -3,6 +3,11 @@ import { Todo } from "../Models/Todos.js";
 import { sandboxApi } from "./AxiosService.js";
 
 
+const todoApi = axios.create({
+    baseURL: 'https://bcw-sandbox.herokuapp.com/api/Tyler/todos',
+    timeout: 12000
+})
+
 class TodosService {
 
 
@@ -42,10 +47,10 @@ class TodosService {
     //this isnt even finding an id when I click on the box
     async completedTodo(id) {
 
-        let todo = ProxyState.todos.find(t => t.id == id)
-        console.log(todo);
-        todo.completed = !todo.completed
-        const res = await sandboxApi.put(todo.id, todo)
+        let todos = ProxyState.todos.find(t => t.id == id)
+        console.log(todos);
+        todos.completed = !todos.completed
+        const res = todoApi.put(todos.id, todos)
         console.log("todo mark complete", res.data);
         ProxyState.todos = ProxyState.todos
     }

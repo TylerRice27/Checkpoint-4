@@ -21,7 +21,7 @@
 
   <main>
     <div class="container-fluid">
-      <div class="row text-light" id="weather">
+      <div class="row text-light justify-content-end" id="weather">
         <!-- <p class="col-md-3 d-flex text-self-end temp">100degrees</p> -->
 
         <!-- </div> -->
@@ -29,7 +29,7 @@
     </div>
     <!-- this can stay hard coded because it can 
     always draws when the page loads -->
-    <div class="h5">Completed: <span id="completed-count">0/10</span></div>
+    <div class=" text-light h5">Completed: <span id="completed-count">0/10</span></div>
     <ul id="todo-list" class=" col-md-2 list-group d-flex justify-self-end">
 
       <li class="list-group-item">
@@ -41,20 +41,16 @@
       <input name="description" placeholder="Add a new task" type="text">
       <button class="btn btn-primary">Add a Task</button>
     </form>
-    <div id="clock" class="d-flex col-md-12 fs-1 justify-content-center text-light">
+    <div id="clock" class="d-flex col-md-12 fs-1 m-5 justify-content-center  text-light">
       <!-- <span class="clock-time">12:45</span>
       <span class="clock-ampm">PM</span> -->
     </div>
-    <div class="col-md-6">
+    <div class="col-md-12 fs-4 m-5 text-light text-center">
       <span id="quote"></span>
     </div>
 
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
-    </div>
-  </footer>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>

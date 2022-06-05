@@ -21,7 +21,7 @@ export class Todo {
         
        
       <li class="list-group-item ">
-        <input type="checkbox" ${this.completed ? 'checked' : ''} onclick"app.todosController.completedTodo('${this.id}')" >
+        <input type= "checkbox" ${this.completed ? 'checked' : ''} onclick="app.todosController.completedTodo('${this.id}')">
       ${this.description}
        <div class="col-2 selectable text-danger" onclick="app.todosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete"></i></div>
       </li>
