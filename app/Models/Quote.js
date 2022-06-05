@@ -13,9 +13,9 @@ export class Quote {
 
     get Template() {
         return `
-<h5>${this.content}</h5>
+<h5 class="myQuote">${this.content}</h5>
 
-<div>${this.author}</div>
+<div class="hide">${this.author}</div>
 
 `
 

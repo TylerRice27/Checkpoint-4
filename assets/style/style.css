@@ -1,1 +1,12 @@
 /* BASIC STYLES HERE */
+
+.hide {
+    display: none;
+}
+
+
+/* this can mix my two css class */
+.myQuote:hover+.hide {
+
+    display: block;
+}

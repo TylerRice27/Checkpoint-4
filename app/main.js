@@ -1,3 +1,4 @@
+import { ImgController } from "./Controllers/ImageController.js";
 import { QuoteController } from "./Controllers/QuoteController.js";
 import { TodosController } from "./Controllers/TodosController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
@@ -12,6 +13,10 @@ class App {
   weatherController = new WeatherController()
 
   quoteController = new QuoteController()
+
+  imgController = new ImgController()
+
+
 
 }
 
