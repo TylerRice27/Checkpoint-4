@@ -51,7 +51,7 @@ class TodosService {
         console.log(todos);
         todos.completed = !todos.completed
         const res = todoApi.put(todos.id, todos)
-        console.log("todo mark complete", res.data);
+        console.log("todo mark complete", todos.id);
         ProxyState.todos = ProxyState.todos
     }
 

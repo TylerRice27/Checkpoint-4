@@ -7,16 +7,20 @@ function _drawToDos() {
     let todos = ProxyState.todos
     let template = ''
     let completedone = 0
-    let taskNumber = todos
+    let uncomplete = 0
+    // let taskNumber = ProxyState.todos
     todos.forEach(t => {
         template += t.TodoTemplate
         if (t.completed) {
             completedone++
+        } else {
+            uncomplete++
         }
 
 
         document.getElementById("todo-list").innerHTML = template
-        document.getElementById("completed-count").innerText = completedone + taskNumber
+        document.getElementById("completed-count").innerText = completedone
+        document.getElementById("uncompleted-count").innerText = uncomplete
     })
 }
 
