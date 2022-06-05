@@ -6,11 +6,17 @@ import { Pop } from "../Utils/Pop.js"
 function _drawToDos() {
     let todos = ProxyState.todos
     let template = ''
+    let completedone = 0
+    let taskNumber = todos
     todos.forEach(t => {
         template += t.TodoTemplate
+        if (t.completed) {
+            completedone++
+        }
 
 
         document.getElementById("todo-list").innerHTML = template
+        document.getElementById("completed-count").innerText = completedone + taskNumber
     })
 }
 

@@ -39,6 +39,8 @@ class TodosService {
         console.log(todo);
         todo.completed = !todo.completed
         const res = await sandboxApi.put(todo.id, todo)
+        console.log("todo mark complete", res.data);
+        ProxyState.todos = ProxyState.todos
     }
 
 

@@ -8,6 +8,8 @@ class AppState extends EventEmitter {
   todos = []
   /** @type {import('./Models/Weather').Weather[]} */
   weathers = []
+  /** @type {import('./Models/Quote').Quote[]} */
+  quotes = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {
