@@ -12,9 +12,9 @@ export class Weather {
     get Template() {
         return `
 
-            <p class="col-md-3 d-flex text-self-end temp">${this.temp}</p></div >
-<p class="col-md-3 d-flex text-self-end temp">${this.humidity}</p></div >
-<p class="col-md-3 d-flex text-self-end temp">${this.name}</p></div >
+            <p class="col-md-3 fs-3 d-flex text-self-end temp">${this.temp}</p></div>
+<p class="col-md-3 fs-3 d-flex text-self-end temp">${this.humidity}</p></div>
+<p class="col-md-3 fs-3 d-flex text-self-end temp">${this.name}</p></div>
 
       `
     }
